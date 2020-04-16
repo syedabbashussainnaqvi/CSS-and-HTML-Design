@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NUSTFlix - An Online Video Streaming Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="icon" type="image/jpg" href="photos/icon.jpg">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js   "></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+	$(document).ready(function(){
+		$("#nav > li > a").on("click", function(e){
+			if($(this).parent().has("ul")) {
+				e.preventDefault();
+			}
+			if(!$(this).hasClass("open")) {
+      // hide any open menus and remove all other classes
+      			$("#nav li ul").slideUp(350);
+      			$("#nav li a").removeClass("open");
+ 
+      // open our new menu and add the open class
+			    $(this).next("ul").slideDown(350);
+      			$(this).addClass("open");
+    		}
+ 
+    		else if($(this).hasClass("open")) {
+      			$(this).removeClass("open");
+      			$(this).next("ul").slideUp(350);
+    		}
+  		});
+	});
+  </script>
+</head>
+<body id="main" style="background:#232b2b">
+  <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+	<h3 href="#" style="width:20%; position:absolute; left:75px; bottom:11px; display:inline; text-decoration:none; color:white; font-family: 'Comic Sans MS'; font-weight:bold;">NUSTFlix</h3>
+    <ul class="nav navbar-nav" style="display:inline; float:right">
+      <li><a href="home.html" style="background:#00688b">Home</a></li>
+	  <li class="dropdown dropdown-large">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Genre<b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-large row" style="margin-left:40%">
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="action.html">Action</a></li>
+							<li><a href="#">Adventure</a></li>
+							<li><a href="#">Animation</a></li>
+							<li><a href="#">Biography</a></li>
+							<li><a href="#">Comedy</a></li>
+							<li><a href="#">Crime</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">Drama</a></li>
+							<li><a href="#">Fantasy</a></li>
+							<li><a href="#">History</a></li>
+							<li><a href="#">Horror</a></li>
+							<li><a href="#">Musical</a></li>
+							<li><a href="#">Mystery</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">Romance</a></li>
+							<li><a href="#">Science</a></li>
+							<li><a href="#">Sport</a></li>
+							<li><a href="#">Thriller</a></li>
+							<li><a href="#">War</a></li>
+							<li><a href="#">Extra</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+      <li class="dropdown dropdown-large">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Year<b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-large row" style="margin-left:49%">
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2018</a></li>
+							<li><a href="#">2017</a></li>
+							<li><a href="#">2016</a></li>
+							<li><a href="#">2015</a></li>
+							<li><a href="#">2014</a></li>
+							<li><a href="#">2013</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2012</a></li>
+							<li><a href="#">2011</a></li>
+							<li><a href="#">2010</a></li>
+							<li><a href="#">2009</a></li>
+							<li><a href="#">2008</a></li>
+							<li><a href="#">2007</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2006</a></li>
+							<li><a href="#">2005</a></li>
+							<li><a href="#">2004</a></li>
+							<li><a href="#">2003</a></li>
+							<li><a href="#">2002</a></li>
+							<li><a href="#">Older</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown dropdown-large">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Top 25<b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-large row" style="margin-left:55%">
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2018</a></li>
+							<li><a href="#">2017</a></li>
+							<li><a href="#">2016</a></li>
+							<li><a href="#">2015</a></li>
+							<li><a href="#">2014</a></li>
+							<li><a href="#">2013</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2012</a></li>
+							<li><a href="#">2011</a></li>
+							<li><a href="#">2010</a></li>
+							<li><a href="#">2009</a></li>
+							<li><a href="#">2008</a></li>
+							<li><a href="#">2007</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2006</a></li>
+							<li><a href="#">2005</a></li>
+							<li><a href="#">2004</a></li>
+							<li><a href="#">2003</a></li>
+							<li><a href="#">2002</a></li>
+							<li><a href="#">Older</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+      <li><a href="about.html">Contact</a></li>
+	  <li style="float:right">
+       	<form class="navbar-form" role="search">
+			<div class="input-group">
+         		<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            	<div class="input-group-btn">
+            		<button class="btn btn-default" type="submit"><i style="color: #00688B" class="glyphicon glyphicon-search"></i></button>
+            	</div>
+        	</div>
+        </form>
+	  </li>
+    </ul>
+  </nav>
+  
+  <div class="icon-bar ">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+ </div>
+  
+  <div class="col-sm-11 text-left" style="margin-left:60px">
+    <div id="myCarousel" class="carousel slide " data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+	<li data-target="#myCarousel" data-slide-to="3"></li>
+	<li data-target="#myCarousel" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img  src="photos/1.jpg">
+    </div>
+
+    <div class="item">
+      <img src="photos/2.jpg" >
+    </div>
+
+    <div class="item">
+      <img src="photos/3.jpg">
+    </div>
+	
+	<div class="item">
+      <img src="photos/4.jpg">
+    </div>
+	
+	<div class="item">
+      <img src="photos/5.jpg">
+    </div>
+	
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> 
+</div>
+
+  
+  <div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <ul id="nav" style="list-style-type:none">
+      			<li><a href="home.html">Home</a></li>
+      			<li><a href="#">Movies &nbsp; <span class = "caret"></span></a>
+        		<ul style="list-style-type:none">
+        			<li><a href="action.html">Action</a></li>
+        			<li><a href="#">Adventure</a></li>
+        			<li><a href="#">Animation</a></li>
+                    <li><a href="#">Biography</a></li>
+                    <li><a href="#">Comedy</a></li>
+                    <li><a href="#">Crime</a></li>
+                    <li><a href="#">More</a></li>
+        		</ul>
+      		</li>
+      		<li><a href="#">Year &nbsp; <span class = "caret"></span></a>
+   				<ul style="list-style-type:none">
+        			<li><a href="hostel-ads.html">2018</a></li>
+        			<li><a href="room-swap.html">2017</a></li>
+        			<li><a href="hostel-stay.html">2016</a></li>
+                    <li><a href="air-coolers.html">2015</a></li>
+                    <li><a href="refrigerators.html">2014</a></li>
+                    <li><a href="other-products.html">2013</a></li>
+					<li><a href="other-products.html">Older</a></li>
+				</ul>         	
+            </li>
+			<li><a href="#">Top 25 &nbsp; <span class = "caret"></span></a>
+   				<ul style="list-style-type:none">
+        			<li><a href="hostel-ads.html">2018</a></li>
+        			<li><a href="room-swap.html">2017</a></li>
+        			<li><a href="hostel-stay.html">2016</a></li>
+                    <li><a href="air-coolers.html">2015</a></li>
+                    <li><a href="refrigerators.html">2014</a></li>
+                    <li><a href="other-products.html">2013</a></li>
+					<li><a href="other-products.html">Older</a></li>
+				</ul>         	
+            </li>
+			<li><a href="about.html">Contact</a></li>
+		</ul>
+  </div>
+  
+  
+  <div class="row" style="margin-left:100px">
+  <hr style="width:50%">
+  <h3 style="color:white;text-align:center;font-weight:bold">Trending</h3>
+  <hr style="width:50%">
+  <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/a.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Deadpool 2</h4><hr style="margin-top:0.4em; margin-bottom:0em; width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr59min | (2018)</h5><hr style="margin-top:0.4em; margin-bottom:0em; width:85%;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Comedy | Adventure</h5><hr style="margin-top:0.4em; width:85%; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 8.1 / 10</h5 style="position:relative;">
+			</div>
+		</div>
+	</div>
+	
+	<div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/b.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Infinity War</h4><hr style="margin-top:0.4em; width:85%;margin-bottom:0em;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;2hr29min | (2018)</h5><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Adventure | Fantasy</h5><hr style="margin-top:0.4em; width:85%;margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 9.0 / 10</h5>
+			</div>
+		</div>
+	</div>
+  <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/c.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Rampage</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr47min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Sci-Fi | Adventure</h5><hr style="width:85%;width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 6.4 / 10</h5>
+			</div>
+		</div>
+	</div>
+	
+  <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/d.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">A Quiet Place</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr30min | (2018)</h5><hr style="margin-top:0.4em; width:85%;margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Drama | Horror | Sci-Fi</h5><hr style="margin-top:0.4em;width:85%; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 8.2 / 10</h5>
+			</div>
+		</div>
+	</div>
+	
+  <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/e.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Tomb Raider</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr58min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Adventure</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 7.0 / 10</h5>
+			</div>
+		</div>
+	</div>
+	
+  <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/f.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Incoming</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr33min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Sci-Fi | Thriller</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 7.0 / 10</h5>
+			</div>
+		</div>
+	</div>	
+	
+	<div style="width:100%;clear:both;">
+		<hr style="width:50%;">
+		<h3 style="color:white;text-align:center;font-weight:bold">Latest Movies</h3>
+		<hr style="width:50%">
+	</div>
+  <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/g.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Juarez 2045</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr30min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Adventure | Sci-Fi</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 3.3 / 10</h5>
+			</div>
+		</div>
+	</div>
+	
+  <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/h.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Samson</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr50min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Drama</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 4.3 / 10</h5>
+			</div>
+		</div>
+	</div>
+	
+  <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/i.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Beyond the Edge</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr41min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Adventure | Fantasy</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 5.0 / 10</h5>
+			</div>
+		</div>
+	</div>
+	
+    <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/j.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Black Water</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr45min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Drama</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 4.8 / 10</h5>
+			</div>
+		</div>
+	</div>
+	
+    <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/k.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Honor Up</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr24min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Adventure</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 3.3 / 10</h5>
+			</div>
+		</div>
+	</div>
+
+    <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/l.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Mohawk</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr31min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Drama | History</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 4.7 / 10</h5>
+			</div>
+		</div>
+	</div>
+
+    <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/m.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Black Panther</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;2hr14min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Adventure |Sci-Fi</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 7.7 / 10</h5>
+			</div>
+		</div>
+	</div>
+
+    <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/n.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Beast of Burden</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr29min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Crime | Drama</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 4.7 / 10</h5>
+			</div>
+		</div>
+	</div>
+	
+  <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/o.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Braven</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr34min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Drama</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 6.0 / 10</h5>
+			</div>
+		</div>
+	</div>
+
+    <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/p.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Cassidy Red</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr31min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Adventure | Drama</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 4.6 / 10</h5>
+			</div>
+		</div>
+	</div>
+
+    <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/q.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">Wasterlander</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;1hr30min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Adventure | Sci-Fi</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 4.5 / 10</h5>
+			</div>
+		</div>
+	</div>
+    <div class="flip-container">	
+		<div class="flip-card">
+			<div class="front">
+				<img src="photos/r.jpg">
+			</div>
+			<div class="back">
+				<h4 style="text-align:center">12 Strong</h4><hr style="margin-top:0.4em; margin-bottom:0em;width:85%;">
+				<h5 style="text-align:center"><i class="fa fa-clock-o"></i>&nbsp;2hr10min | (2018)</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center"><span class="glyphicon glyphicon-film"></span> Action | Drama | History</h5><hr style="width:85%;margin-top:0.4em; margin-bottom:0em;">
+				<h5 style="text-align:center; color:yellow"><span class="glyphicon glyphicon-star-empty"></span> 6.7 / 10</h5>
+			</div>
+		</div>
+	</div>
+	</div>
+	<button onClick="topFunction()" id="myBtn" title="Go to top"><span class="glyphicon glyphicon-chevron-up"></span>&nbsp;Top</button>
+<footer class="col-sm-12 container-fluid text-center">
+  <div class="row">
+  	<div class="col-sm-1" style="text-align:left">
+		<h5 >Genre</h5>
+        <ul class="list-unstyled">
+        	<li><a href="action.html">Action</a><li>
+            <li><a href="#">Adventure</a><li>
+            <li><a href="#">Animation</a><li>
+            <li><a href="#">Biography</a><li>
+			<li><a href="#">Comedy</a><li>
+			<li><a href="#">Crime</a><li>
+        </ul>
+    </div>
+  	<div class="col-sm-1" style="text-align:left">
+    	<br >
+		<br>
+		<ul class="list-unstyled">
+        	<li><a href="#">Drama</a><li>
+            <li><a href="#">Fantasy</a><li>
+            <li><a href="#">History</a><li>
+            <li><a href="#">Horror</a><li>
+			<li><a href="#">Musical</a><li>
+			<li><a href="#">Mystery</a><li>
+        </ul>
+	</div>
+	<div class="col-sm-1" style="text-align:left">
+    	<br >
+		<br>
+		<ul class="list-unstyled">
+        	<li><a href="#">Romance</a><li>
+            <li><a href="#">Sci-Fi</a><li>
+            <li><a href="#">Sport</a><li>
+            <li><a href="#">Thriller</a><li>
+			<li><a href="#">War</a><li>
+			<li><a href="#">Extra</a><li>
+        </ul>
+	</div>
+    <div class="col-sm-1" style="text-align:left">
+    	<h5>Year</h5>
+        <ul class="list-unstyled">
+        	<li><a href="#">2017</a><li>
+            <li><a href="#">2016</a><li>
+            <li><a href="#">2015</a><li>
+            <li><a href="#">2014</a><li>
+			<li><a href="#">2013</a><li>
+			<li><a href="#">2012</a><li>
+        </ul>
+    </div>
+  	<div class="col-sm-1" style="text-align:left">
+    	<br>
+		<br>
+		<ul class="list-unstyled">
+        	<li><a href="#">2011</a><li>
+            <li><a href="#">2010</a><li>
+            <li><a href="#">2009</a><li>
+            <li><a href="#">2008</a><li>
+			<li><a href="#">2007</a><li>
+			<li><a href="#">2006</a><li>
+        </ul>
+	</div>
+	<div class="col-sm-1" style="text-align:left">
+    	<br >
+		<br>
+		<ul class="list-unstyled">
+        	<li><a href="#">2005</a><li>
+            <li><a href="#">2004</a><li>
+            <li><a href="#">2003</a><li>
+            <li><a href="#">2002</a><li>
+			<li><a href="#">2001</a><li>
+			<li><a href="#">Older</a><li>
+        </ul>
+	</div>
+	<div class="col-sm-1" style="text-align:left">
+    	<h5>Navigation</h5>
+        <ul class="list-unstyled">
+        	<li><a href="home.html">Home</a><li>
+            <li><a href="#">Movies</a><li>
+            <li><a href="#">Genre</a><li>
+			<li><a href="#">Year</a><li>
+			<li><a href="#">Serials</a><li>
+			<li><a href="about.html">Contact</a><li>
+        </ul>
+    </div>
+    <div class="col-sm-1" style="text-align:left">
+    	<h5>Follow</h5>
+        <ul class="list-unstyled">
+        	<li><a href="#">Facebook</a><li>
+            <li><a href="#">Twitter</a><li>
+            <li><a href="#">Google+</a><li>
+            <li><a href="#">LinkedIn</a><li>
+			<li><a href="#">Youtube</a><li>
+			<li><a href="#">Instagram</a><li>
+        </ul>
+    </div>
+    <div class="col-sm-4" style="text-align:center">
+    	<h5>About Us</h5>
+        <p>This Website is made as semester project. This is an entertainment website to provide relieve to students suffering from stress or anxiety. This is all in one platform with apealing interface and functionality.</p>
+		</div>
+</footer>
+
+
+  <script>
+    function openSlideMenu(){
+      document.getElementById('side-menu').style.width = '250px';
+      document.getElementById('main').style.marginLeft = '250px';
+    }
+
+    function closeSlideMenu(){
+      document.getElementById('side-menu').style.width = '0';
+      document.getElementById('main').style.marginLeft = '0';
+    }
+	
+	window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 300) {
+        document.getElementById("myBtn").style.display = "block";
+    } 
+
+	else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+  </script>
+</body>
+</html>

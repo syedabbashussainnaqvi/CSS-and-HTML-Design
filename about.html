@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NUSTFlix - Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="icon" type="image/jpg" href="photos/icon.jpg">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+	$(document).ready(function(){
+		$("#nav > li > a").on("click", function(e){
+			if($(this).parent().has("ul")) {
+				e.preventDefault();
+			}
+			if(!$(this).hasClass("open")) {
+      // hide any open menus and remove all other classes
+      			$("#nav li ul").slideUp(350);
+      			$("#nav li a").removeClass("open");
+ 
+      // open our new menu and add the open class
+			    $(this).next("ul").slideDown(350);
+      			$(this).addClass("open");
+    		}
+ 
+    		else if($(this).hasClass("open")) {
+      			$(this).removeClass("open");
+      			$(this).next("ul").slideUp(350);
+    		}
+  		});
+		$("form.a").submit(function(event){
+			event.preventDefault();
+			alert("Your query has been submitted successfully.");
+			location.reload();
+		});
+		$("form.b").submit(function(event){
+			event.preventDefault();
+			alert("You are successfully subscribed to our channel.");
+			location.reload();
+		});
+	});
+  </script>
+</head>
+<body id="main" style="background:#232b2b">
+    <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+	<h3 href="#" style="width:20%; position:absolute; left:75px; bottom:11px; display:inline; text-decoration:none; color:white; font-family: 'Comic Sans MS'; font-weight:bold;">NUSTFlix</h3>
+    <ul class="nav navbar-nav" style="display:inline; float:right">
+      <li><a href="home.html">Home</a></li>
+	  <li class="dropdown dropdown-large">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Genre<b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-large row" style="margin-left:40%">
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="action.html">Action</a></li>
+							<li><a href="#">Adventure</a></li>
+							<li><a href="#">Animation</a></li>
+							<li><a href="#">Biography</a></li>
+							<li><a href="#">Comedy</a></li>
+							<li><a href="#">Crime</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">Drama</a></li>
+							<li><a href="#">Fantasy</a></li>
+							<li><a href="#">History</a></li>
+							<li><a href="#">Horror</a></li>
+							<li><a href="#">Musical</a></li>
+							<li><a href="#">Mystery</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">Romance</a></li>
+							<li><a href="#">Science</a></li>
+							<li><a href="#">Sport</a></li>
+							<li><a href="#">Thriller</a></li>
+							<li><a href="#">War</a></li>
+							<li><a href="#">Extra</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+      <li class="dropdown dropdown-large">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Year<b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-large row" style="margin-left:49%">
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2018</a></li>
+							<li><a href="#">2017</a></li>
+							<li><a href="#">2016</a></li>
+							<li><a href="#">2015</a></li>
+							<li><a href="#">2014</a></li>
+							<li><a href="#">2013</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2012</a></li>
+							<li><a href="#">2011</a></li>
+							<li><a href="#">2010</a></li>
+							<li><a href="#">2009</a></li>
+							<li><a href="#">2008</a></li>
+							<li><a href="#">2007</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2006</a></li>
+							<li><a href="#">2005</a></li>
+							<li><a href="#">2004</a></li>
+							<li><a href="#">2003</a></li>
+							<li><a href="#">2002</a></li>
+							<li><a href="#">Older</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown dropdown-large">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Top 25<b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-large row" style="margin-left:55%">
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2018</a></li>
+							<li><a href="#">2017</a></li>
+							<li><a href="#">2016</a></li>
+							<li><a href="#">2015</a></li>
+							<li><a href="#">2014</a></li>
+							<li><a href="#">2013</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2012</a></li>
+							<li><a href="#">2011</a></li>
+							<li><a href="#">2010</a></li>
+							<li><a href="#">2009</a></li>
+							<li><a href="#">2008</a></li>
+							<li><a href="#">2007</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li><a href="#">2006</a></li>
+							<li><a href="#">2005</a></li>
+							<li><a href="#">2004</a></li>
+							<li><a href="#">2003</a></li>
+							<li><a href="#">2002</a></li>
+							<li><a href="#">Older</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+      <li><a href="#" style="background:#00688b">Contact</a></li>
+	  <li style="float:right">
+       	<form class="navbar-form" role="search">
+			<div class="input-group">
+         		<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            	<div class="input-group-btn">
+            		<button class="btn btn-default" type="submit"><i style="color: #00688B" class="glyphicon glyphicon-search"></i></button>
+            	</div>
+        	</div>
+        </form>
+	  </li>
+    </ul>
+  </nav>
+
+  
+  <div class="icon-bar ">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+ </div>
+  
+  <div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <ul id="nav" style="list-style-type:none">
+      			<li><a href="home.html">Home</a></li>
+      			<li><a href="#">Movies &nbsp; <span class = "caret"></span></a>
+        		<ul style="list-style-type:none">
+        			<li><a href="action.html">Action</a></li>
+        			<li><a href="#">Adventure</a></li>
+        			<li><a href="#">Animation</a></li>
+                    <li><a href="#">Biography</a></li>
+                    <li><a href="#">Comedy</a></li>
+                    <li><a href="#">Crime</a></li>
+                    <li><a href="#">More</a></li>
+        		</ul>
+      		</li>
+      		<li><a href="#">Year &nbsp; <span class = "caret"></span></a>
+   				<ul style="list-style-type:none">
+        			<li><a href="hostel-ads.html">2018</a></li>
+        			<li><a href="room-swap.html">2017</a></li>
+        			<li><a href="hostel-stay.html">2016</a></li>
+                    <li><a href="air-coolers.html">2015</a></li>
+                    <li><a href="refrigerators.html">2014</a></li>
+                    <li><a href="other-products.html">2013</a></li>
+					<li><a href="other-products.html">Older</a></li>
+				</ul>         	
+            </li>
+			<li><a href="#">Top 25 &nbsp; <span class = "caret"></span></a>
+   				<ul style="list-style-type:none">
+        			<li><a href="hostel-ads.html">2018</a></li>
+        			<li><a href="room-swap.html">2017</a></li>
+        			<li><a href="hostel-stay.html">2016</a></li>
+                    <li><a href="air-coolers.html">2015</a></li>
+                    <li><a href="refrigerators.html">2014</a></li>
+                    <li><a href="other-products.html">2013</a></li>
+					<li><a href="other-products.html">Older</a></li>
+				</ul>         	
+            </li>
+			<li><a href="about.html">Contact</a></li>
+		</ul>
+  </div>
+	
+	<ul class="breadcrumb" style="padding-left:85px">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="about.html" style="color:black">Contact</a></li>
+	</ul>
+	
+	<div class="row" style="margin-left:85px">    
+	<div class="col-sm-11">
+		<h2 style="color:#ffffff;font-weight:bold">About Us</h2><hr>
+		<p style="color:white;text-align:justify;">NUSTFLix is the entertainment platform mainly for NUSTians, offering them unlimited access to thousands of TV shows & movies - Plus local faves, LIVE sports, Snackables and more. We’re putting the entertainment that people want at their fingertips, with high quality streaming on any device. Users can enjoy a fully free version or unlock VIP to get EVERYTHING. </p>
+		<p style="color:white;text-align:justify;">A huge selection everyone’s favourite comedies, drama, K-drama, Turkish drama, Bollywood, Nollywood, cartoons, movies, live sports and more; from Hollywood, The UK, Asia, The Middle East and Africa - all ready to either stream or download. There’s tens of thousands of hours of content available online for you to watch instantly via almost any device that connects to the interwebs. Go ahead, pause, rewind, fast forward or replay as often as you like.</p>
+		<h2 style="color:#ffffff;font-weight:bold">Contact Us</h2><hr>
+		<p style="color:white">Do you have any questions or suggestion or complaint fillout this form. Kindly make sure that all the fields are filled befor submitting the query. We will try to get back to you as early as possible.</p>
+		<div class="about-container">
+			<form class="a">
+				<div class="row">
+					<div class="col-25">
+						<label for="fname">First Name</label>
+					</div>
+					<div class="col-75">
+						<input type="text" required placeholder="Your name..">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label for="lname">Last Name</label>
+					</div>
+					<div class="col-75">
+						<input type="text" required placeholder="Your last name..">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label for="email">Email</label>
+					</div>
+					<div class="col-75">
+						<input type="email" required placeholder="Your Email..">
+					</div>
+				</div>
+
+			<div class="row">
+				<div class="col-25">
+					<label for="subject">Subject</label>
+				</div>
+				<div class="col-75">
+					<textarea required placeholder="Write something.." style="height:100px"></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<input class="col-25"  action="#" type="submit" >
+			</div>
+		</form>
+	</div>
+	<br />
+	<h2 style="color:#ffffff;font-weight:bold">Subscribe to our Newsletter</h2><hr>
+    <p style="color:white">To get updates about upcomming events in NUST and update about featured products, subscribe to our channel.</p>
+	<div class="about-container">
+			<form class="b">
+				<div width="100%" style="margin:10px">
+						<input type="text" placeholder="Your name..">
+				</div>
+				<div div width="100%" style="margin:10px">
+						<input type="email" required placeholder="Your email..">
+				</div>
+				<label style="margin-left:10px">
+					<input type="radio" checked="checked"> Daily Updates
+				</label>
+				<label>
+					<input type="radio"> Weekly Updates
+				</label>
+				<label>
+					<input type="radio"> Fortnightly Updates
+				</label>
+				<div class="row">
+					<input class="col-25" action="#" type="submit">
+				</div>
+			</form>
+	</div>
+    </div>
+</div>
+
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><span class="glyphicon glyphicon-chevron-up"></span>&nbsp;Top</button>
+	
+	
+
+<footer class="col-sm-12 container-fluid text-center">
+  <div class="row">
+  	<div class="col-sm-1" style="text-align:left">
+    	<h5>Genre</h5>
+        <ul class="list-unstyled">
+        	<li><a href="action.html">Action</a><li>
+            <li><a href="#">Adventure</a><li>
+            <li><a href="#">Animation</a><li>
+            <li><a href="#">Biography</a><li>
+			<li><a href="#">Comedy</a><li>
+			<li><a href="#">Crime</a><li>
+        </ul>
+    </div>
+  	<div class="col-sm-1" style="text-align:left">
+    	<br >
+		<br>
+		<ul class="list-unstyled">
+        	<li><a href="#">Drama</a><li>
+            <li><a href="#">Fantasy</a><li>
+            <li><a href="#">History</a><li>
+            <li><a href="#">Horror</a><li>
+			<li><a href="#">Musical</a><li>
+			<li><a href="#">Mystery</a><li>
+        </ul>
+	</div>
+	<div class="col-sm-1" style="text-align:left">
+    	<br >
+		<br>
+		<ul class="list-unstyled">
+        	<li><a href="#">Romance</a><li>
+            <li><a href="#">Sci-Fi</a><li>
+            <li><a href="#">Sport</a><li>
+            <li><a href="#">Thriller</a><li>
+			<li><a href="#">War</a><li>
+			<li><a href="#">Extra</a><li>
+        </ul>
+	</div>
+    <div class="col-sm-1" style="text-align:left">
+    	<h5>Year</h5>
+        <ul class="list-unstyled">
+        	<li><a href="#">2017</a><li>
+            <li><a href="#">2016</a><li>
+            <li><a href="#">2015</a><li>
+            <li><a href="#">2014</a><li>
+			<li><a href="#">2013</a><li>
+			<li><a href="#">2012</a><li>
+        </ul>
+    </div>
+  	<div class="col-sm-1" style="text-align:left">
+    	<br>
+		<br>
+		<ul class="list-unstyled">
+        	<li><a href="#">2011</a><li>
+            <li><a href="#">2010</a><li>
+            <li><a href="#">2009</a><li>
+            <li><a href="#">2008</a><li>
+			<li><a href="#">2007</a><li>
+			<li><a href="#">2006</a><li>
+        </ul>
+	</div>
+	<div class="col-sm-1" style="text-align:left">
+    	<br >
+		<br>
+		<ul class="list-unstyled">
+        	<li><a href="#">2005</a><li>
+            <li><a href="#">2004</a><li>
+            <li><a href="#">2003</a><li>
+            <li><a href="#">2002</a><li>
+			<li><a href="#">2001</a><li>
+			<li><a href="#">Older</a><li>
+        </ul>
+	</div>
+	<div class="col-sm-1" style="text-align:left">
+    	<h5>Navigation</h5>
+        <ul class="list-unstyled">
+        	<li><a href="home.html">Home</a><li>
+            <li><a href="#">Movies</a><li>
+            <li><a href="#">Genre</a><li>
+			<li><a href="#">Year</a><li>
+			<li><a href="#">Serials</a><li>
+			<li><a href="about.html">Contact</a><li>
+        </ul>
+    </div>
+    <div class="col-sm-1" style="text-align:left">
+    	<h5>Follow</h5>
+        <ul class="list-unstyled">
+        	<li><a href="#">Facebook</a><li>
+            <li><a href="#">Twitter</a><li>
+            <li><a href="#">Google+</a><li>
+            <li><a href="#">LinkedIn</a><li>
+			<li><a href="#">Youtube</a><li>
+			<li><a href="#">Instagram</a><li>
+        </ul>
+    </div>
+    <div class="col-sm-4" style="text-align:center">
+    	<h5>About Us</h5>
+        <p>This Website is made as semester project. This is an entertainment website to provide relieve to students suffering from stress or anxiety. This is all in one platform with apealing interface and functionality.</p>
+		</div>
+</footer>
+
+
+
+  <script>
+    function openSlideMenu(){
+      document.getElementById('side-menu').style.width = '250px';
+      document.getElementById('main').style.marginLeft = '250px';
+    }
+
+    function closeSlideMenu(){
+      document.getElementById('side-menu').style.width = '0';
+      document.getElementById('main').style.marginLeft = '0';
+    }
+	
+	window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 100) {
+        document.getElementById("myBtn").style.display = "block";
+    } 
+
+	else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+  </script>
+</body>
+</html>
